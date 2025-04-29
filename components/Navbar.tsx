@@ -4,7 +4,7 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <nav className='px-4 md:px-12 py-4 md:py-6 bg-white text-black shadow-sm'>
+        <nav className='px-4 md:px-12 py-4 md:py-6 bg-slate-100 border border-slate-300 text-black shadow-sm'>
             <div className='flex items-center justify-between'>
                 <Link href={'/'} className='hidden md:inline-block text-lg font-semibold'>ZWatches</Link>
                 <div className='relative max-w-[300px] md:w-[400px]'>

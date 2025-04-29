@@ -1,9 +1,19 @@
+'use client';
+
+import axios from 'axios';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const ProductList = () => {
     const products = ["", "", "", ""];
+
+    useEffect(() => {
+        axios.get('/api/fetch-products').then((res) => {
+            console.log(res.data);
+        })
+    }, []);
+
     return (
         <div id='products' className='px-4 md:px-12 py-5 md:py-10 flex justify-center items-center '>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5'>
